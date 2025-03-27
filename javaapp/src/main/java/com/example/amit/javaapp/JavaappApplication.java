@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController("/api")
+@RestController
 public class JavaappApplication {
 
 	public static void main(String[] args) {
@@ -15,6 +15,12 @@ public class JavaappApplication {
 
 	@GetMapping("/hello")
 	public String hello(){
-		return "Hello World";
+		return "Hello from docker";
+	}
+
+	
+	@GetMapping("/bye")
+	public String bye(){
+		return "Bye from docker";
 	}
 }
